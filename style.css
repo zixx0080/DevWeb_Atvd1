@@ -55,7 +55,7 @@ main {
     text-align: center;
     background-image: url("./img/transferir\ \(3\).jpg");
     background-size: cover;
-    height: 102vh;
+    height: 92%;
     width: 100%;
     margin: 11%  2.5%;
     border-radius: 10px;
@@ -115,4 +115,5 @@ h1, h2, h3 {
    border: solid 2px orangered;
    border-radius: 10px;
    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+   height: auto;
 }
