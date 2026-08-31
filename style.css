@@ -46,7 +46,7 @@ main {
     background-color: white;
     display: flex;
     text-align: center;
-    background-image: url("../img/transferir\ \(3\).jpg");
+    background-image: url("./img/transferir\ \(3\).jpg");
     background-size: cover;
 }
 
