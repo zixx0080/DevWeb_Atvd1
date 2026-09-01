@@ -45,19 +45,38 @@ nav > ul {
 }
 
 main {
+    position: relative; /* isso ira me permitir sobrepor ele com as midias depois*/
     align-items: center; /* horizontal */
     justify-content: center; /* vertical */
     display:flex;
-    border: solid 1px black;
     height: 90vh;
     width: 100%;
     background-image: url("./img/Esferas.png");
     background-size: cover; /* aplica comportamento de cobertura ao fundo */
     background-position: center; /* estou centralizando minha imagem do fundo */
+    overflow: hidden;
+}
+
+/* aqui sera o plano a onde o video e o giff serão exibidos */
+.fundo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* aqui sera onde o video e o giff iram sobrepor o fundo */
+.media {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .btn_invocar {
-
+    position: relative;
+    z-index: 4;
+    margin-top:30%;
     height: auto;
     width: 150px;
     border-radius: 10px;
