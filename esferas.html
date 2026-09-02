@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./esferas.css" />
+    <script defer src="./esferas.js"></script>
+    <title>Esferas do Dragão | Dragon Ball</title>
+  </head>
+
+  <body>
+    <header>
+      <img src="./img/Logo_DB-removebg-preview.png" class="logo" alt="Logo Dragon Ball" />
+      <nav aria-label="Navegacao principal">
+        <ul>
+          <li><a class="nav-link" href="./index.html">Goku</a></li>
+          <li><a class="nav-link" href="./transformações.html">Transformações</a></li>
+          <li><a class="nav-link" href="./esferas.html">Esferas</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="principal">
+      
+      <div class="fundo"> <!-- aqui eu crio meu fundo -->
+        <img id="gifShenlong" class="media" src="./img/summon-dragon.gif"/>
+         <!-- meu giff que sera reproduzido primeiro -->
+
+        <video src="./img/202609011410.mp4" id="loopShenlong" class="media" autoplay loop> 
+          <!-- aqui eu ja defino alguns comportamentos do meu video
+          como começar e repetir automaticamente-->
+        </video>
+      </div>
+
+      <button id="btnInvocar" type="button" class="btn_invocar">Invocar Shenlong</button>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 - Pagina de estudos de Desenvolvimento Web.</p>
+    </footer>
+  </body>
+</html>
