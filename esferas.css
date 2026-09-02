@@ -139,20 +139,18 @@ h1, h2, h3 {
 }
 
 #formPedido {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position:relative;
+  margin-top:23%;
   padding: 20px;
   border-radius: 20px;
   z-index: 9999;
-  width: 400px;
-  max-width: 90vw;
+  width: auto;
+  height: auto;
   display: flex;
   flex-direction: column;
-  background: #f5f5f5;
 
   border: 2px solid #ffb703;
   box-shadow: 0 0 12px #ffb703, 0 0 20px #ff7b00; /* sombra brilhante */
+  background: linear-gradient(135deg, #ff8a00, #ff4d00); /* degrade no fundo do butão */
 }
 

@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const formPedido = document.getElementById("formPedido");
 
   // isso so me permiti executar o script se todos os elementos existirem na pagina
-  if (!botaoInvocar || !areaPrincipal || !gifShenlong || !videoShenlong || !formPedido) return;
+  if (!botaoInvocar || !areaPrincipal || !gifShenlong || !loopShenlong || !formPedido) return;
 
   // deixa as midias escondidas ate eu iniciar a ação
   gifShenlong.style.display = "none";
