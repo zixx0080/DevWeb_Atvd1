@@ -8,9 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const areaPrincipal = document.querySelector(".principal");
   const gifShenlong = document.getElementById("gifShenlong");
   const videoShenlong = document.getElementById("loopShenlong");
+  const formPedido = document.getElementById("formPedido");
 
   // isso so me permiti executar o script se todos os elementos existirem na pagina
-  if (!botaoInvocar || !areaPrincipal || !gifShenlong || !loopShenlong) return;
+  if (!botaoInvocar || !areaPrincipal || !gifShenlong || !videoShenlong || !formPedido) return;
 
   // deixa as midias escondidas ate eu iniciar a ação
   gifShenlong.style.display = "none";
@@ -18,16 +19,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   botaoInvocar.addEventListener("click", () => { // apos eu clicar...
-    areaPrincipal.classList.add("shenlong-ativo");
-    gifShenlong.style.display = "block";
-    videoShenlong.style.display = "none";
-    videoShenlong.pause();
-    videoShenlong.currentTime = 0;
+    areaPrincipal.classList.add("shenlong-ativo"); // usa minha classe CCS do shenlong invocado colocando na minha area principal
+    gifShenlong.style.display = "block"; // chama meu giff 
+    videoShenlong.style.display = "none"; // isso aqui esconde o meu video em loop ate o giff acabar
+    videoShenlong.pause(); // não executa o video ainda
+    videoShenlong.currentTime = 0; // inicio o video sempre do tempo 0
+
+    botaoInvocar.style.display = "none";
+
+    setTimeout(() => {
+        formPedido.classList.remove("invisivel"); // apos 3 segundos, o formulario aparece pois retirei que deixa ele invisivel
+    }, 3000); // espera 3 segundos
+
+
 
     botaoInvocar.textContent = "Shenlong invocado"; // muda o texto do botão
     botaoInvocar.disabled = true; //impede de clicar nele dnv
 
-    // após 2,5 segundos, o GIF some e o vídeo entra em loop
+
+
+    // o giff por traz do video some apos 2,5 segundos e o video comeca a entrar em loop
     setTimeout(() => {
       gifShenlong.style.display = "none";
       videoShenlong.style.display = "block";
