@@ -9,14 +9,29 @@ document.addEventListener("DOMContentLoaded", () => {
   const gifShenlong = document.getElementById("gifShenlong");
   const videoShenlong = document.getElementById("loopShenlong");
   const formPedido = document.getElementById("formPedido");
+  const pedidoInput = document.getElementById("pedido");
+  const formulario = formPedido.querySelector("form");
 
   // isso so me permiti executar o script se todos os elementos existirem na pagina
-  if (!botaoInvocar || !areaPrincipal || !gifShenlong || !loopShenlong || !formPedido) return;
+  if (!botaoInvocar || !areaPrincipal || !gifShenlong || !videoShenlong || !formPedido) return;
 
   // deixa as midias escondidas ate eu iniciar a ação
   gifShenlong.style.display = "none";
   videoShenlong.style.display = "none";
+  formPedido.classList.add("invisivel"); // adiciono a classe que deixa meu formulario invisivel
 
+if (formulario) { // se o formulario existir
+  formulario.addEventListener("submit", (evento) => { // oque isso aqui faz é uma otima pergunta
+    evento.preventDefault();
+
+    if (pedidoInput && pedidoInput.value.trim()) {// se o campo existir e tiver algo dentro exceto espaço em branco
+      pedidoInput.value = "";// limpa o campo apos o envio
+      alert("Seu desejo foi realizado!");//envia mensagem
+      window.location.reload();//recarrego a pagina apos clicar no botão
+    }
+  });
+}
+  
 
   botaoInvocar.addEventListener("click", () => { // apos eu clicar...
     areaPrincipal.classList.add("shenlong-ativo"); // usa minha classe CCS do shenlong invocado colocando na minha area principal
@@ -31,12 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
         formPedido.classList.remove("invisivel"); // apos 3 segundos, o formulario aparece pois retirei que deixa ele invisivel
     }, 3000); // espera 3 segundos
 
-
-
     botaoInvocar.textContent = "Shenlong invocado"; // muda o texto do botão
     botaoInvocar.disabled = true; //impede de clicar nele dnv
-
-
 
     // o giff por traz do video some apos 2,5 segundos e o video comeca a entrar em loop
     setTimeout(() => {
