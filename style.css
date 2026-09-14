@@ -3,10 +3,7 @@
     padding: 0;
 }
 
-header, footer, aside, article, section, nav {
-    
-}
-
+/* tudo daqui para baixo e referente ao topo de meu site até a linha 47*/
 header {
     background-color: orange;
     display: flex;
@@ -57,10 +54,10 @@ main {
     background-size: cover;
     height: 92%;
     width: 100%;
-    margin: 11%  2.5%;
+    margin: 11% 2.5%;
     border-radius: 10px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-    }
+}
 
 .goku {
     width: 100%;
@@ -75,17 +72,17 @@ main {
     margin: 2.5% 1.5%;
 }
 
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
-    background-color: orange;
+.sessao {
+    border: solid 2px orangered;
     border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    height: auto;
 }
 
-footer p {
-    opacity: 0.8;
+h1, h2, h3 {
+    color: orange;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 1%;
 }
 
 hr {
@@ -99,21 +96,21 @@ hr {
     margin-top: 0.5%;
 }
 
-h1, h2, h3 {
-    color:orange;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 1%;
-}
-
 .texto {
     font-family: "Segoe UI", Tahoma, sans-serif;
-    text-align: justify;/* formatação uniforme de texto */
+    text-align: justify; /* formatação uniforme de texto */
     margin: 2.5% 5%;
 }
 
-.sessao {
-   border: solid 2px orangered;
-   border-radius: 10px;
-   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-   height: auto;
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: orange;
+    border-radius: 10px;
+}
+
+footer p {
+    opacity: 0.8;
 }
